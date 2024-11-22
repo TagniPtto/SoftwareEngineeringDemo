@@ -1,0 +1,22 @@
+name: Build & Test
+
+on: 
+    workflow_dispatch:
+        inputs:
+            something:
+                required: true
+                default: ajkaj
+    push:
+        branches:
+                - main
+
+
+env:
+    BUILD_TYPE: Debug
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
