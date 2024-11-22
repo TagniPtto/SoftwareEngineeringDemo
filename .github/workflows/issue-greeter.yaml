@@ -6,6 +6,8 @@ on:
 
 permissions:
     issues: write
+    contents: read
+    
     
 
 jobs:
@@ -19,4 +21,5 @@ jobs:
               uses: ./.github/actions/issue-greeter-action-bash 
               with:
                 issue-url: ${{github.event.issue.url}}
-                comment-body: "Hi $${{github.actor}}"
+                comment-body: "Hi $${{github.actor}}, thanks for opening! We'll get your order soon"
+                token: ${{secrets.GITHUB_TOKEN}}
