@@ -7,7 +7,7 @@ TEST_SUITE("Basic Arithmetic")
     TEST_CASE("Addition") {
         Calculator calc;
 
-        CHECK(calc.Add(2, 3) == 4);
+        CHECK(calc.Add(2, 3) == 5);
         CHECK(calc.Add(-1, 1) == 0);
         CHECK(calc.Add(0, 0) == 0);
     }
